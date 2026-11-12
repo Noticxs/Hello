@@ -1,3 +1,6 @@
+use whoami;
+
 fn main() {
-    println!("Hello!");
+    let username = whoami::username().unwrap_or_else(|_| "<unknown>".to_string());
+    println!("Hello, {}!", username);
 }
